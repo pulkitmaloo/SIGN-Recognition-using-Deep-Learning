@@ -23,20 +23,7 @@ def load_dataset():
 
 
 def random_mini_batches(X, Y, mini_batch_size = 64, seed = 0):
-    """
-    Creates a list of random minibatches from (X, Y)
-    
-    Arguments:
-    X -- input data, of shape (input size, number of examples) (m, Hi, Wi, Ci)
-    Y -- true "label" vector (containing 0 if cat, 1 if non-cat), of shape (1, number of examples) (m, n_y)
-    mini_batch_size - size of the mini-batches, integer
-    seed -- this is only for the purpose of grading, so that you're "random minibatches are the same as ours.
-    
-    Returns:
-    mini_batches -- list of synchronous (mini_batch_X, mini_batch_Y)
-    """
-    
-    m = X.shape[0]                  # number of training examples
+    m = X.shape[0]                  
     mini_batches = []
     np.random.seed(seed)
     
@@ -69,19 +56,6 @@ def convert_to_one_hot(Y, C):
 
 
 def forward_propagation_for_predict(X, parameters):
-    """
-    Implements the forward propagation for the model: LINEAR -> RELU -> LINEAR -> RELU -> LINEAR -> SOFTMAX
-    
-    Arguments:
-    X -- input dataset placeholder, of shape (input size, number of examples)
-    parameters -- python dictionary containing your parameters "W1", "b1", "W2", "b2", "W3", "b3"
-                  the shapes are given in initialize_parameters
-
-    Returns:
-    Z3 -- the output of the last LINEAR unit
-    """
-    
-    # Retrieve the parameters from the dictionary "parameters" 
     W1 = parameters['W1']
     b1 = parameters['b1']
     W2 = parameters['W2']

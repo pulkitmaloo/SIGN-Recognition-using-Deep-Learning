@@ -2,4 +2,4 @@
 
 Recognizing Hand Signs using Convolutional Neural Network
 
-![Screenshot](screenshot.png = 250x)
+<img src=screenshot.png width="512">
